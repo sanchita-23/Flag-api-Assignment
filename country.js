@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             // Iterate over the first 6 countries and create HTML elements
-            for (let i = 0; i < 9; i++) {
+            for (let i = 0; i < 256; i++) {
                 const country = data[i];
                 const flagSrc = country.flags.png;
                 const countryName = country.name.common;
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Append flag image and country info
                 flagContainer.appendChild(flagImg);
 
-                if (i < 9) {
+                if (i < 256) {
                     // Add country name and Google Maps link for the flags
                     const countryInfo = document.createElement('div');
                     countryInfo.innerHTML = `
